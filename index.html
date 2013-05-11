@@ -1,0 +1,31 @@
+<script src="phonegap.js"></script>
+
+<HTML>
+<HEAD>
+<SCRIPT LANGUAGE="javascript">
+function controle(form1, form2) {
+var test = document.form1.input.value;
+var test = test.replace("," , ".");
+var test2 = document.form2.input.value;
+var test2 = test2.replace("," , ".");
+var resultado = test / test2;
+if (resultado < 0.70) { 
+	alert('É melhor abastecer com Alcool');
+} else {
+	alert('É melhor abastecer com Gasolina');
+}
+}
+</SCRIPT>
+</HEAD>
+<BODY>
+<FORM NAME="form1">
+<h1>Alcool</h1>
+<INPUT TYPE="text" NAME="input" VALUE=""><BR>
+</FORM>
+<FORM NAME="form2">
+<h1>Gasolina</h1>
+<INPUT TYPE="text2" NAME="input" VALUE=""><BR>
+<INPUT TYPE="button" NAME="botao" VALUE="Qual o melhor" onClick="controle(form1, form2)">
+</FORM>
+</BODY>
+</HTML>
